@@ -3,16 +3,31 @@
 :numbered!:
 :imagesdir: images
 
-This version implements `movies#show` and `search#index`:
+This version implements `home#index`, `search#index`, and `movies#show`:
 [source,console]
 ----
-rails generate Movies show
+rails g controller home index
 rails g controller search index
+rails g controller movies show
 
-Prefix Verb URI Pattern             Controller#Action
-search_index GET  /search/index(.:format) search#index
- movie GET  /movies/:id(.:format)   movies#show
+rake routes
+Prefix Verb URI Pattern      Controller#Action
+search     GET  /search      search#index
+movie      GET  /movies/:id  movies#show
+home_index GET  /home/index  home#index
+root       GET  /            home#index
 ----
+
+These routes are set in _config/routes.rb_:
+[source,ruby]
+----
+Rails.application.routes.draw do
+  # get 'home/index'
+  get "search", to: "search#index"
+  resources :movies, only: :show
+  root 'home#index'
+----
+
 
 ## System dependencies
 

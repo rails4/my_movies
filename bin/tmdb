@@ -13,7 +13,14 @@ include Tmdb
 #
 API_KEY = ENV['TMDB_API_KEY']
 
-puts "API KEY: #{API_KEY}"
+if API_KEY.nil?
+  puts "Please set your MovieDB key with"
+  puts "$ export TMDB_API_KEY=YOUR_TMDb_KEY"
+  puts "or get/generate new key within API > Details section"
+  puts "on your acount TMDb page https://www.themoviedb.org/login"
+else
+puts "Your TMDB API KEY: #{API_KEY}"
+end
 
 Api.key(API_KEY)
 Api.language("en") # setup your default language
@@ -27,7 +34,7 @@ puts "#batman movies found: #{movies.size}"
 
 puts m.original_title
 puts m.popularity
-puts m.poster_path
+puts "poster_path: #{m.poster_path}"
 puts m.vote_average
 puts m.vote_count
 
