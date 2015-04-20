@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 gem 'sqlite3'
 
-gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.4'
+gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 5.0'
 
 gem 'uglifier', '>= 1.3.0'
@@ -16,6 +16,7 @@ gem 'turbolinks'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'jbuilder', '~> 2.0'
 # gem 'sdoc', '~> 0.4.0', group: :doc
+
 # Use thin as the app server
 gem 'thin'
 
@@ -26,6 +27,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Mutes assets pipeline log messages. Read more: https://github.com/evrone/quiet_assets
+  gem 'quiet_assets'
 end
 
 gem 'themoviedb', '~> 0.1.0'

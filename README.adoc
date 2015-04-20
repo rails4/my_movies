@@ -3,16 +3,28 @@
 :numbered!:
 :imagesdir: images
 
+This version implements only `movies#show`:
+[source,console]
+----
+rails generate Movies show
+rake routes
+     Prefix Verb URI Pattern            Controller#Action
+movies_show GET  /movies/show(.:format) movies#show
+----
+
 ## System dependencies
 
-1. The app uses the Movie Database API,
-https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
-and a the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
-gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
+1. The Movie Database API:
+* https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
+* the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
+  gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
 
 2. Use the official Sass port of Bootstrap:
 * https://github.com/twbs/bootstrap-sass[bootstrap-sass] –
   see README for instructions how to use it with Rails
+* Integrating Rails and Bootstrap:
+** http://www.gotealeaf.com/blog/integrating-rails-and-bootstrap-part-1[Part 1 - the Installation]
+** http://www.gotealeaf.com/blog/integrating-rails-and-bootstrap-part-2/[Part 2 - CSS and Components]
 
 
 ## Configuration
@@ -22,17 +34,39 @@ https://www.themoviedb.org/login[head into your account page on TMDb] and
 generate a new key from within the “API” section found in the left hand sidebar
 (click *API>Details*).
 
+[NOTE]
 Try some request from
 http://docs.themoviedb.apiary.io[the Movie Database API on the Apiary console].
+
+Add initializer
+
+[source,ruby]
+.config/initializers/set_tmdb_api_key.rb
+----
+tmdb_api_key = ENV['TMDB_API_KEY']
+if tmdb_api_key.nil?
+  puts "Please set your MovieDB key with"
+  puts "$ export TMDB_API_KEY=YOUR_TMDb_KEY"
+  puts "or get/generate new key within API > Details section"
+  puts "on your acount TMDb page https://www.themoviedb.org/login"
+else
+puts "TMDB API KEY: #{tmdb_api_key}"
+end
+Tmdb::Api.key(tmdb_api_key)
+Tmdb::Api.language("en")  # optionally, set your default language
+----
 
 
 ## How to run the test suite
 
-TODO: RSpec documentation:
+*TODO*
+
+Useful links to the RSpec documentation:
 
 * https://github.com/rspec/rspec-rails[rspec-rails]
 * https://github.com/rspec/rspec-collection_matchers[rspec-collection_matchers]
 * https://github.com/rspec/rspec-expectations[rspec-expectations]
+
 
 ## Other things you may want to cover
 
