@@ -73,7 +73,7 @@ Tmdb::Api.key(tmdb_api_key)
 Tmdb::Api.language("en")  # optionally, set your default language
 ----
 
-Check API with _bin/tmdb_ script:
+Check with _bin/tmdb_ script if PAI works:
 [source,console]
 ----
 bin/tmdb
