@@ -5,12 +5,16 @@
 
 ## System dependencies
 
-The app uses the Movie Database API,
+1. The app uses the Movie Database API,
 https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
 and a the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
 gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
 
-  
+2. Use the official Sass port of Bootstrap:
+* https://github.com/twbs/bootstrap-sass[bootstrap-sass] –
+  see README for instructions how to use it with Rails
+
+
 ## Configuration
 
 The app uses the API key. To register for an API key,
