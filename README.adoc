@@ -5,23 +5,21 @@
 
 ## System dependencies
 
-The app uses the Movie Database API:
+The app uses the Movie Database API,
+https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
+and a the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
+gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
 
-* https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
-
-* https://www.themoviedb.org/documentation/api/wrappers-libraries[wrappers libraries]
-
-
+  
 ## Configuration
 
-The app uses the API key. To register for an API key, 
+The app uses the API key. To register for an API key,
 https://www.themoviedb.org/login[head into your account page on TMDb] and
 generate a new key from within the “API” section found in the left hand sidebar
 (click *API>Details*).
 
-
-* https://github.com/ahmetabdi/themoviedb[themoviedb] –
-  a Ruby wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API]
+Try some request from
+http://docs.themoviedb.apiary.io[the Movie Database API on the Apiary console].
 
 
 ## How to run the test suite
