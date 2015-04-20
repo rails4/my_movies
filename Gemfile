@@ -32,3 +32,4 @@ group :development, :test do
 end
 
 gem 'themoviedb', '~> 0.1.0'
+gem 'oj', '~> 2.12.3' # used by my bin/tmdb script

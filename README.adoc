@@ -3,13 +3,15 @@
 :numbered!:
 :imagesdir: images
 
-This version implements only `movies#show`:
+This version implements `movies#show` and `search#index`:
 [source,console]
 ----
 rails generate Movies show
-rake routes
-     Prefix Verb URI Pattern            Controller#Action
-movies_show GET  /movies/show(.:format) movies#show
+rails g controller search index
+
+Prefix Verb URI Pattern             Controller#Action
+search_index GET  /search/index(.:format) search#index
+ movie GET  /movies/:id(.:format)   movies#show
 ----
 
 ## System dependencies
@@ -38,7 +40,7 @@ generate a new key from within the “API” section found in the left hand side
 Try some request from
 http://docs.themoviedb.apiary.io[the Movie Database API on the Apiary console].
 
-Add initializer
+Add initializer _set_tmdb_api_key.rb_:
 
 [source,ruby]
 .config/initializers/set_tmdb_api_key.rb
@@ -56,6 +58,11 @@ Tmdb::Api.key(tmdb_api_key)
 Tmdb::Api.language("en")  # optionally, set your default language
 ----
 
+Check API with _bin/tmdb_ script:
+[source,console]
+----
+bin/tmdb
+----
 
 ## How to run the test suite
 
