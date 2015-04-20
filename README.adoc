@@ -101,7 +101,7 @@ Useful links to the RSpec documentation:
 This README would normally document whatever steps are necessary to get the
 application up and running:
 
-* link:.ruby-version[Ruby version]
+* link:.ruby-version[Ruby version], link:.ruby-gemset[RVM gemset]
 * Database creation – do not apply here
 * Database initialization – do not apply here
 * Services (job queues, cache servers, search engines, etc.)
