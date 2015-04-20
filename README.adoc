@@ -3,6 +3,12 @@
 :numbered!:
 :imagesdir: images
 
+[NOTE]
+There are many API in the wild.
+https://gist.github.com/wbzyl/2bd9f10f0d51f34f9bde[This gist] list many API
+which that require no server-side auth or private credentials, and are
+thus good for small browser-only JS projects.
+
 This version implements `home#index`, `search#index`, and `movies#show`:
 [source,console]
 ----
