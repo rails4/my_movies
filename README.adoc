@@ -66,7 +66,7 @@ Tmdb::Api.language("en")  # optionally, set your default language
 Set the api key in the environment wit:
 [source,console]
 ----
-export TMDB_API_KEY=PUT_YOUR_KEY_HERE
+export TMDB_API_KEY=REPLACE_THIS_WITH_YOUR_KEY
 ----
 and check with _bin/tmdb_ script if the TMDb API works:
 [source,console]
