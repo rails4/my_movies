@@ -99,6 +99,7 @@ Useful links to the RSpec documentation:
 * https://github.com/rspec/rspec-expectations[rspec-expectations]
 
 Useful links to the Minitest documentation:
+
 * https://github.com/blowmage/minitest-rails/tree/1.x#readme[minitest-rails] –
   install howto
 * https://github.com/seattlerb/minitest[minitest] – sources on GitHub
