@@ -34,22 +34,6 @@ Rails.application.routes.draw do
   root 'home#index'
 ----
 
-
-## System dependencies
-
-1. The Movie Database API:
-* https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
-* the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
-  gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
-
-2. Use the official Sass port of Bootstrap:
-* https://github.com/twbs/bootstrap-sass[bootstrap-sass] –
-  see README for instructions how to use it with Rails
-* Integrating Rails and Bootstrap:
-** http://www.gotealeaf.com/blog/integrating-rails-and-bootstrap-part-1[Part 1 - the Installation]
-** http://www.gotealeaf.com/blog/integrating-rails-and-bootstrap-part-2/[Part 2 - CSS and Components]
-
-
 ## Configuration
 
 The app uses the API key. To register for an API key,
@@ -79,15 +63,29 @@ Tmdb::Api.key(tmdb_api_key)
 Tmdb::Api.language("en")  # optionally, set your default language
 ----
 
-Check with _bin/tmdb_ script if API works:
+Check with _bin/tmdb_ script if the TMDb API works:
 [source,console]
 ----
 bin/tmdb
 ----
 
-## How to run the test suite
 
-*TODO*
+## System dependencies
+
+1. The Movie Database API:
+* https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
+* the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
+  gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
+
+2. Use the official Sass port of Bootstrap:
+* https://github.com/twbs/bootstrap-sass[bootstrap-sass] –
+  see README for instructions how to use it with Rails
+* Integrating Rails and Bootstrap:
+** http://www.gotealeaf.com/blog/integrating-rails-and-bootstrap-part-1[Part 1 - the Installation]
+** http://www.gotealeaf.com/blog/integrating-rails-and-bootstrap-part-2/[Part 2 - CSS and Components]
+
+
+## How to run the test suite
 
 Useful links to the RSpec documentation:
 
@@ -95,15 +93,23 @@ Useful links to the RSpec documentation:
 * https://github.com/rspec/rspec-collection_matchers[rspec-collection_matchers]
 * https://github.com/rspec/rspec-expectations[rspec-expectations]
 
+Useful links to the Minitest documentation:
+* https://github.com/blowmage/minitest-rails/tree/1.x#readme[minitest-rails] –
+  install howto
+* https://github.com/seattlerb/minitest[minitest] – sources on GitHub
+* http://docs.seattlerb.org/minitest[minitest/{unit,spec,mock,benchmark}]
+* https://github.com/blowmage/minitest-rails-capybara[minitest-rails-capybara] –
+  Capybara integration for _MiniTest::Rails_
+* http://blowmage.com/minitest-rails-capybara[minitest-rails-capybara]
+
 
 ## Other things you may want to cover
 
 This README would normally document whatever steps are necessary to get the
 application up and running:
 
-* link:.ruby-version[Ruby version], link:.ruby-gemset[RVM gemset]
+* link:.ruby-version[Ruby version]
 * Database creation – do not apply here
 * Database initialization – do not apply here
 * Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
-* ...
+* Deployment instructions – Heroku?
