@@ -1,7 +1,15 @@
 = MyMovies
 
 :numbered!:
-:imagesdir: images
+:imagesdir: public
+
+This app uses https://www.themoviedb.org/documentation/api[Movie Database API]
+and the https://github.com/ahmetabdi/themoviedb[themoviedb] gem.
+
+image::themoviedb.svg[the IMDb logo]
+
+You can play on https://apiary.io[Apiary] with
+the http://docs.themoviedb.apiary.io[API] on a web console.
 
 [NOTE]
 There are many API in the wild.
@@ -77,12 +85,8 @@ bin/tmdb
 
 ## System dependencies
 
-1. The Movie Database API:
-* https://www.themoviedb.org/documentation/api[Movie & TV API Overview]
-* the Ruby https://github.com/ahmetabdi/themoviedb[themoviedb]
-  gem, a wrapper for the http://docs.themoviedb.apiary.io[The Movie Database API].
+This app uses the official Sass port of Bootstrap:
 
-2. Use the official Sass port of Bootstrap:
 * https://github.com/twbs/bootstrap-sass[bootstrap-sass] –
   see README for instructions how to use it with Rails
 * Integrating Rails and Bootstrap:
