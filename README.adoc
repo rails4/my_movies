@@ -6,6 +6,11 @@
 This app uses https://www.themoviedb.org/documentation/api[Movie Database API]
 and the https://github.com/ahmetabdi/themoviedb[themoviedb] gem.
 
+[WARNING]
+The _themoviedb_ gem is not longer maintained.
+In the next version we are going to use the
+https://github.com/osiro/enceladus[enceladus] gem.
+
 image::themoviedb.png[IMDb logo]
 
 You can play on https://apiary.io[Apiary] with
