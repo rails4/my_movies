@@ -6,7 +6,7 @@
 This app uses https://www.themoviedb.org/documentation/api[Movie Database API]
 and the https://github.com/ahmetabdi/themoviedb[themoviedb] gem.
 
-image::themoviedb.svg[the IMDb logo]
+image::themoviedb.png[IMDb logo]
 
 You can play on https://apiary.io[Apiary] with
 the http://docs.themoviedb.apiary.io[API] on a web console.
